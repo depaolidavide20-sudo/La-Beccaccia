@@ -841,7 +841,6 @@ body.menu-open .site-header {
   height: clamp(24rem, 41vw, 38rem);
 }
 
-.food-card figcaption,
 .location-card figcaption {
   display: flex;
   padding-top: 0.9rem;
@@ -853,13 +852,8 @@ body.menu-open .site-header {
   text-transform: uppercase;
 }
 
-.food-card figcaption p,
 .location-card figcaption p {
   margin: 0;
-}
-
-.food-card figcaption span {
-  color: var(--gold);
 }
 
 .carousel-footer {
