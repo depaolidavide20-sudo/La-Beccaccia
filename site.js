@@ -45,6 +45,7 @@ const translations = {
     "nav.contacts": "Contatti",
     "cta.book": "Prenota",
     "cta.bookTable": "Prenota un tavolo",
+    "cta.heroBook": "PRENOTA IL TUO TAVOLO",
     "cta.menu": "Scopri il nostro menù",
     "cta.wine": "Carta dei Vini",
     "cta.call": "Chiama ora",
@@ -56,6 +57,7 @@ const translations = {
     "hero.hours": "<span>APERTO TUTTO L'ANNO</span> CARNE ALLA BRACE - CUCINA LIGURE - FUNGHI - TARTUFI",
     "hero.edge": "Brace, funghi & tradizione ligure",
     "hero.discover": "Scopri La Beccaccia",
+    "hero.manifesto": "Il fuoco.<br>La materia.<br>La cucina.",
     "restaurant.kicker": "01 Ristorante",
     "restaurant.copy1": "Carne alla brace, pasta fresca fatta in casa e cucina ligure contemporanea sulle prime alture di Rapallo.",
     "restaurant.copy2": "Una tavola calda, curata e concreta, costruita intorno a materia prima, brace e stagionalità.",
@@ -145,6 +147,7 @@ const translations = {
     "nav.contacts": "Contacts",
     "cta.book": "Book now",
     "cta.bookTable": "Book a table",
+    "cta.heroBook": "BOOK YOUR TABLE",
     "cta.menu": "Discover our menu",
     "cta.wine": "Wine list",
     "cta.call": "Call now",
@@ -156,6 +159,7 @@ const translations = {
     "hero.hours": "<span>OPEN ALL YEAR</span> CHARCOAL GRILL - LIGURIAN CUISINE - MUSHROOMS - TRUFFLES",
     "hero.edge": "Grill, mushrooms & Ligurian tradition",
     "hero.discover": "Discover La Beccaccia",
+    "hero.manifesto": "The fire.<br>The matter.<br>The cuisine.",
     "restaurant.kicker": "01 Restaurant",
     "restaurant.copy1": "Charcoal-grilled meat, handmade fresh pasta and contemporary Ligurian cuisine on the first hills of Rapallo.",
     "restaurant.copy2": "A warm, curated and concrete table built around ingredients, fire and seasonality.",
@@ -926,31 +930,55 @@ bookingForm?.addEventListener("submit", (event) => {
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const hero = document.querySelector(".hero");
-const heroImage = document.querySelector(".hero-image");
+const heroCarousel = document.querySelector("[data-hero-carousel]");
+const heroSlides = [...document.querySelectorAll("[data-hero-slide]")];
+const heroIndicators = [...document.querySelectorAll("[data-hero-indicator]")];
 const heroTitle = document.querySelector(".hero-title-wrap");
-const heroSocials = document.querySelector(".hero-socials");
-const scrollCue = document.querySelector(".scroll-cue");
 let heroMotionFrame = null;
+let activeHeroSlide = 0;
+let heroCarouselTimer = null;
+
+const setHeroSlide = (index) => {
+  if (!heroSlides.length) return;
+  activeHeroSlide = (index + heroSlides.length) % heroSlides.length;
+  heroSlides.forEach((slide, slideIndex) => {
+    slide.classList.toggle("is-active", slideIndex === activeHeroSlide);
+  });
+  heroIndicators.forEach((indicator, indicatorIndex) => {
+    const active = indicatorIndex === activeHeroSlide;
+    indicator.classList.toggle("is-active", active);
+    if (active) indicator.setAttribute("aria-current", "true");
+    else indicator.removeAttribute("aria-current");
+  });
+};
+
+const startHeroCarousel = () => {
+  if (reduceMotion || heroSlides.length < 2) return;
+  window.clearInterval(heroCarouselTimer);
+  heroCarouselTimer = window.setInterval(() => setHeroSlide(activeHeroSlide + 1), 3500);
+};
+
+heroIndicators.forEach((indicator) => {
+  indicator.addEventListener("click", () => {
+    setHeroSlide(Number(indicator.dataset.heroIndicator || 0));
+    startHeroCarousel();
+  });
+});
+
+setHeroSlide(0);
+startHeroCarousel();
 
 const updateHeroMotion = () => {
   heroMotionFrame = null;
-  if (!hero || !heroImage || !heroTitle || reduceMotion) return;
+  if (!hero || !heroTitle || reduceMotion) return;
   const progress = Math.min(1, Math.max(0, window.scrollY / hero.offsetHeight));
 
   if (progress < 0.002) {
-    heroImage.style.removeProperty("transform");
-    heroTitle.style.removeProperty("transform");
     heroTitle.style.removeProperty("opacity");
-    heroSocials?.style.removeProperty("opacity");
-    scrollCue?.style.removeProperty("opacity");
     return;
   }
 
-  heroImage.style.transform = `translate3d(0, ${progress * 7}%, 0) scale(${1 + progress * 0.12})`;
-  heroTitle.style.transform = `translate3d(0, ${progress * -11}vh, 0) scale(${1 - progress * 0.045})`;
   heroTitle.style.opacity = String(Math.max(0, 1 - progress * 1.22));
-  if (heroSocials) heroSocials.style.opacity = String(Math.max(0, 1 - progress * 1.7));
-  if (scrollCue) scrollCue.style.opacity = String(Math.max(0, 1 - progress * 2.1));
 };
 
 if (!reduceMotion) {
