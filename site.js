@@ -927,7 +927,7 @@ const setHeroSlide = (index) => {
 const startHeroCarousel = () => {
   if (reduceMotion || heroSlides.length < 2) return;
   window.clearInterval(heroCarouselTimer);
-  heroCarouselTimer = window.setInterval(() => setHeroSlide(activeHeroSlide + 1), 3500);
+  heroCarouselTimer = window.setInterval(() => setHeroSlide(activeHeroSlide + 1), 3000);
 };
 
 heroIndicators.forEach((indicator) => {
