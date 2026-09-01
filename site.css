@@ -5,15 +5,17 @@
   --ink-soft: #121d18;
   --paper: #f1ede5;
   --paper-deep: #f1ede5;
-  --gold: #b88746;
-  --gold-light: #f0cf8a;
-  --orange: #d6a545;
+  --brand-red: #b32020;
+  --brand-red-bright: #e54848;
+  --gold: var(--brand-red);
+  --gold-light: var(--brand-red-bright);
+  --orange: #d63b32;
   --white: #fffdf8;
   --warm-black: #070d0a;
   --surface-dark: #10110f;
   --surface-soft: #e9e2d5;
-  --accent-gold: #a16207;
-  --accent-gold-bright: #d6a545;
+  --accent-gold: #9f161a;
+  --accent-gold-bright: var(--brand-red-bright);
   --focus-ring: #fff2c2;
   --radius-soft: 0.5rem;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -5236,5 +5238,240 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .hero-slide {
     transition: none;
+  }
+}
+
+/* Final Beccaccia accents, header logo, hero socials and location photos */
+:root {
+  --brand-red: #b32020;
+  --brand-red-bright: #e54848;
+  --gold: var(--brand-red);
+  --gold-light: var(--brand-red-bright);
+  --orange: #d63b32;
+  --accent-gold: #9f161a;
+  --accent-gold-bright: var(--brand-red-bright);
+}
+
+.site-header,
+.hero,
+.restaurant-section,
+.site-footer,
+.mobile-menu,
+.mobile-menu .menu-panel,
+.map-label {
+  --gold: var(--brand-red-bright);
+  --gold-light: var(--brand-red-bright);
+  --orange: var(--brand-red-bright);
+  --accent-gold: var(--brand-red);
+  --accent-gold-bright: var(--brand-red-bright);
+}
+
+.location-section,
+.reviews-section,
+.contact-section,
+.card-modal,
+.booking-modal {
+  --gold: var(--brand-red);
+  --gold-light: var(--brand-red);
+  --orange: var(--brand-red);
+  --accent-gold: var(--brand-red);
+  --accent-gold-bright: var(--brand-red-bright);
+}
+
+.site-header .header-brand-mark.brand-logo {
+  display: inline-flex;
+  width: auto;
+  height: clamp(2.95rem, 4vw, 4rem);
+  min-width: 0;
+  align-items: center;
+  line-height: 0;
+}
+
+.site-header .brand-logo picture {
+  display: block;
+  height: 100%;
+}
+
+.site-header .brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: min(15rem, 28vw);
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  filter: drop-shadow(0 0.22rem 0.65rem rgba(0, 0, 0, 0.45));
+  mix-blend-mode: screen;
+}
+
+.hero .hero-socials-center {
+  position: absolute;
+  z-index: 4;
+  top: calc(50% + clamp(3.05rem, 5.6vw, 5.95rem));
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  display: inline-flex;
+  gap: 0.52rem;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transform: translateX(-50%);
+}
+
+.hero .hero-socials-center .hero-social-link {
+  min-height: 2.12rem;
+  padding: 0 0.78rem;
+  border: 1px solid rgba(255, 253, 248, 0.48);
+  border-radius: 999px;
+  background: rgba(7, 13, 10, 0.14);
+  color: var(--white);
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0.7rem 1.8rem rgba(0, 0, 0, 0.15);
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.hero .hero-socials-center .hero-social-link svg {
+  width: 1.02rem;
+  height: 1.02rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: currentColor;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+}
+
+.hero .hero-socials-center .hero-social-link .instagram-dot,
+.hero .hero-socials-center .hero-social-link .facebook-mark {
+  fill: currentColor;
+  stroke: none;
+}
+
+.hero .hero-socials-center .hero-social-link:hover,
+.hero .hero-socials-center .hero-social-link:focus-visible {
+  border-color: rgba(229, 72, 72, 0.82);
+  background: rgba(179, 32, 32, 0.82);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.restaurant-section .section-kicker,
+.restaurant-section .food-current,
+.restaurant-section .carousel-footer > p,
+.restaurant-section .carousel-footer > p span,
+.site-footer .footer-bottom a,
+.mobile-menu nav a span,
+.hero .hero-socials-center .hero-social-link:focus-visible,
+.hero-indicators button.is-active::before {
+  color: var(--brand-red-bright);
+}
+
+.hero-indicators button.is-active::before,
+.hero-indicators button:focus-visible::before,
+.hero-indicators button:hover::before {
+  background: var(--brand-red-bright);
+}
+
+.location-section .section-kicker,
+.location-section .location-card figcaption span,
+.location-section .carousel-footer > p span,
+.reviews-section .section-kicker,
+.reviews-section .stars,
+.reviews-section .review-text-link,
+.reviews-section .review-cta,
+.contact-section .section-kicker,
+.contact-section .contact-list h3,
+.contact-section .contact-social-link,
+.card-modal .catalog-item > span,
+.booking-modal label > span,
+.language-switch button.is-active {
+  color: var(--brand-red);
+}
+
+.reviews-section .review-cta {
+  border-color: var(--brand-red);
+}
+
+.restaurant-section .section-kicker::after,
+.location-section .section-kicker::after,
+.reviews-section .section-kicker::after,
+.contact-section .section-kicker::after,
+.desktop-nav a::after,
+.mobile-menu nav a::after {
+  background: var(--brand-red);
+}
+
+.location-card:nth-child(1) img {
+  object-position: center 52%;
+}
+
+.location-card:nth-child(2) img {
+  object-position: center center;
+}
+
+.location-card:nth-child(3) img {
+  object-position: center center;
+}
+
+.location-card:nth-child(4) img {
+  object-position: center 52%;
+}
+
+.location-card:nth-child(5) img {
+  object-position: center center;
+}
+
+.location-card:nth-child(6) img {
+  object-position: center center;
+}
+
+@media (max-width: 760px) {
+  .site-header .header-brand-mark.brand-logo {
+    width: 6.4rem;
+    height: 3rem;
+  }
+
+  .site-header .brand-logo picture,
+  .site-header .brand-logo-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .site-header .brand-logo-img {
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero .hero-socials-center {
+    top: calc(50% + 2.25rem);
+    gap: 0.48rem;
+  }
+
+  .hero .hero-socials-center .hero-social-link {
+    width: 2.18rem;
+    min-width: 2.18rem;
+    height: 2.18rem;
+    min-height: 2.18rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .hero .hero-socials-center .hero-social-link span {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .hero-manifesto {
+    top: calc(50% + 4.85rem);
   }
 }
