@@ -5619,3 +5619,113 @@ body {
   border-color: var(--brand-red);
   color: var(--white);
 }
+
+/* Absolute final black header and compact hero socials */
+.site-header,
+.site-header.is-scrolled,
+body.menu-open .site-header {
+  position: fixed;
+  top: 0;
+  background: #000;
+  background-color: #000;
+  backdrop-filter: none;
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.site-header .header-brand-mark.brand-logo,
+.site-header .brand-logo,
+.site-header .brand-logo picture,
+.site-header .brand-logo-img {
+  background: #000;
+}
+
+.site-header .header-brand-mark.brand-logo {
+  height: clamp(3.75rem, 4.9vw, 4.9rem);
+  overflow: visible;
+}
+
+.site-header .brand-logo-img {
+  max-width: min(21rem, 36vw);
+  filter: none;
+  mix-blend-mode: screen;
+  transform: scale(1.3) translateZ(0);
+  transform-origin: left center;
+}
+
+.hero .hero-socials-center {
+  top: calc(50% + clamp(11.3rem, 12.5vw, 13.6rem));
+  gap: 0.48rem;
+}
+
+.hero-actions {
+  top: calc(50% + clamp(14rem, 15vw, 16.6rem));
+}
+
+.hero .hero-socials-center .hero-social-link {
+  width: 2.18rem;
+  min-width: 2.18rem;
+  height: 2.18rem;
+  min-height: 2.18rem;
+  padding: 0;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.28);
+  border-color: rgba(255, 253, 248, 0.58);
+  color: var(--white);
+}
+
+.hero .hero-socials-center .hero-social-link span {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.hero .hero-socials-center .hero-social-link:hover,
+.hero .hero-socials-center .hero-social-link:focus-visible {
+  background: rgba(0, 0, 0, 0.44);
+  background-color: rgba(0, 0, 0, 0.44);
+  border-color: var(--brand-red-bright);
+  color: var(--brand-red-bright);
+}
+
+.hero .hero-socials-center .hero-social-link:hover svg,
+.hero .hero-socials-center .hero-social-link:focus-visible svg {
+  background: transparent;
+  background-color: transparent;
+  color: currentColor;
+}
+
+.reviews-section .review-cta:hover,
+.reviews-section .review-cta:focus-visible {
+  background: transparent;
+  background-color: transparent;
+  border-color: var(--brand-red);
+  color: var(--brand-red);
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  .site-header.is-scrolled {
+    height: 3.55rem;
+    min-height: 3.55rem;
+  }
+
+  .site-header .header-brand-mark.brand-logo {
+    width: 7.8rem;
+    height: 3.08rem;
+  }
+
+  .site-header .brand-logo-img {
+    max-width: none;
+    transform: scale(1.44) translateZ(0);
+    transform-origin: left center;
+  }
+
+  .hero .hero-socials-center {
+    top: calc(50% + 9.35rem);
+  }
+}
