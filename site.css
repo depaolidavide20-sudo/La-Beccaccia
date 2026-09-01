@@ -5475,3 +5475,147 @@ body {
     top: calc(50% + 4.85rem);
   }
 }
+
+/* Final header visibility, larger logo inside same header, and red hover states */
+.site-header {
+  height: clamp(5.35rem, 6.7vw, 6.5rem);
+  min-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 13, 10, 0.9), rgba(7, 13, 10, 0.62) 62%, rgba(7, 13, 10, 0.18));
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.site-header.is-scrolled {
+  height: clamp(4.65rem, 5.7vw, 5.55rem);
+  padding-top: 0;
+  padding-bottom: 0;
+  background: rgba(7, 13, 10, 0.96);
+}
+
+.site-header::after {
+  background: rgba(229, 72, 72, 0.45);
+}
+
+.site-header .header-brand-mark.brand-logo {
+  height: clamp(3.55rem, 4.75vw, 4.75rem);
+  overflow: visible;
+}
+
+.site-header .brand-logo picture {
+  overflow: visible;
+}
+
+.site-header .brand-logo-img {
+  max-width: min(18rem, 32vw);
+  transform: scale(1.18) translateZ(0);
+  transform-origin: left center;
+}
+
+.site-header .book-link {
+  background: rgba(7, 13, 10, 0.2);
+  border-color: rgba(255, 253, 248, 0.72);
+  color: var(--white);
+}
+
+.site-header :where(.desktop-nav a, .book-link, .language-switch button):hover,
+.site-header :where(.desktop-nav a, .book-link, .language-switch button):focus-visible,
+.restaurant-section :where(.outline-button, .carousel-arrows button):hover,
+.restaurant-section :where(.outline-button, .carousel-arrows button):focus-visible,
+.site-footer :where(a, button, .footer-social-link):hover,
+.site-footer :where(a, button, .footer-social-link):focus-visible,
+.map-label a:hover,
+.map-label a:focus-visible {
+  background-color: transparent;
+  border-color: var(--brand-red-bright);
+  color: var(--brand-red-bright);
+}
+
+.hero .hero-socials-center .hero-social-link:hover,
+.hero .hero-socials-center .hero-social-link:focus-visible {
+  background: rgba(7, 13, 10, 0.24);
+  border-color: var(--brand-red-bright);
+  color: var(--brand-red-bright);
+}
+
+.hero .hero-primary:hover,
+.hero .hero-primary:focus-visible {
+  background: var(--white);
+  border-color: var(--brand-red-bright);
+  color: var(--brand-red);
+}
+
+.reviews-section .review-cta:hover,
+.reviews-section .review-cta:focus-visible,
+.contact-section .contact-actions .contact-book:hover,
+.contact-section .contact-actions .contact-book:focus-visible,
+.whatsapp-submit:hover,
+.whatsapp-submit:focus-visible,
+.mobile-sticky-book:hover,
+.mobile-sticky-book:focus-visible,
+.mobile-menu .menu-book:hover,
+.mobile-menu .menu-book:focus-visible {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--white);
+}
+
+.review-links-summary a:hover,
+.review-links-summary a:focus-visible,
+.contact-list a:hover,
+.contact-list a:focus-visible {
+  color: var(--brand-red);
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    height: 3.55rem;
+    min-height: 3.55rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .site-header.is-scrolled {
+    height: 3.55rem;
+  }
+
+  .site-header .header-brand-mark.brand-logo {
+    width: 7.15rem;
+    height: 3.08rem;
+  }
+
+  .site-header .brand-logo-img {
+    transform: scale(1.24) translateZ(0);
+    transform-origin: left center;
+  }
+}
+
+.site-header .desktop-nav a:hover,
+.site-header .desktop-nav a:focus-visible,
+.site-header .book-link:hover,
+.site-header .book-link:focus-visible,
+.site-header .language-switch button:hover,
+.site-header .language-switch button:focus-visible,
+.restaurant-section .outline-button:hover,
+.restaurant-section .outline-button:focus-visible,
+.restaurant-section .carousel-arrows button:hover,
+.restaurant-section .carousel-arrows button:focus-visible,
+.site-footer a:hover,
+.site-footer a:focus-visible,
+.site-footer button:hover,
+.site-footer button:focus-visible {
+  background: transparent;
+  border-color: var(--brand-red-bright);
+  color: var(--brand-red-bright);
+}
+
+.reviews-section .review-cta:hover,
+.reviews-section .review-cta:focus-visible {
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  color: var(--white);
+}
