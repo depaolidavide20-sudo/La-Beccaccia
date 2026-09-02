@@ -52,7 +52,7 @@ const translations = {
     "cta.call": "Chiama ora",
     "card.food": "Menù",
     "card.wine": "Carta dei Vini",
-    "card.note": "In caso di allergie o intolleranze, prima di ordinare informa il personale di sala. Alcuni prodotti possono essere sottoposti ad abbattimento rapido della temperatura. La carta può variare secondo stagione e disponibilità.",
+    "card.note": "I nostri piatti possono contenere o essere preparati in ambienti dove sono presenti allergeni. Per qualsiasi informazione chiedere al personale.",
     "card.wineNote": "Etichette, annate e disponibilità possono variare. Chiedi al personale il suggerimento del giorno.",
     "hero.overline": "Brace & Cucina",
     "hero.hours": "<span>APERTO TUTTO L'ANNO</span> CARNE ALLA BRACE - CUCINA LIGURE - FUNGHI - TARTUFI",
@@ -75,6 +75,8 @@ const translations = {
     "location.terrace1": "Sala interna",
     "location.terrace2": "Il dehors",
     "location.terrace3": "Il giardino",
+    "location.dehors": "Il dehors",
+    "location.gardenTables": "Tavoli nel verde",
     "reviews.kicker": "03 Recensioni",
     "reviews.title": "Cosa dicono di noi",
     "reviews.awards": "Canali recensioni",
@@ -106,24 +108,24 @@ const translations = {
     "legal.notes": "Note legali",
     "legal.manageCookies": "Gestisci cookie",
     "cookie.title": "Privacy e servizi esterni",
-    "cookie.copy": "Usiamo solo strumenti tecnici. Per aprire WhatsApp dai form o caricare Google Maps ti chiediamo prima il consenso ai servizi esterni.",
+    "cookie.copy": "Usiamo solo strumenti tecnici. Google Maps viene caricato solo dopo il consenso ai servizi esterni.",
     "cookie.necessary": "Solo necessari",
     "cookie.accept": "Accetta servizi esterni",
     "cookie.preferences": "Dettagli",
     "map.notice": "La mappa di Google viene caricata solo dopo il consenso ai servizi esterni.",
     "map.load": "Carica la mappa",
     "form.kicker": "Scrivici su WhatsApp",
-    "form.title": "Raccontaci<br><em>cosa desideri.</em>",
-    "form.intro": "Compila i campi: prepareremo il messaggio e ti chiederemo il consenso prima di aprire WhatsApp.",
-    "form.name": "Nome e cognome *",
-    "form.date": "Data",
-    "form.time": "Orario",
-    "form.guests": "Persone",
+    "form.title": "Prenota<br><em>il tuo tavolo.</em>",
+    "form.intro": "Inserisci i dati essenziali: prepariamo il messaggio e apriamo WhatsApp.",
+    "form.name": "Nome Cognome *",
+    "form.date": "Data *",
+    "form.time": "Orario *",
+    "form.guests": "Persone *",
     "form.choose": "Scegli",
     "form.message": "Messaggio",
     "form.placeholder": "Richieste o informazioni utili",
     "form.submit": "Continua su WhatsApp",
-    "form.note": "Nessun dato viene salvato sul sito: prima di aprire WhatsApp ti chiediamo il consenso ai servizi esterni.",
+    "form.note": "Nessun dato viene salvato sul sito: WhatsApp si apre con il messaggio già compilato.",
   },
   en: {
     skip: "Skip to content",
@@ -140,7 +142,7 @@ const translations = {
     "cta.call": "Call now",
     "card.food": "Menu",
     "card.wine": "Wine list",
-    "card.note": "In case of allergies or intolerances, please inform our staff before ordering. Some products may be blast chilled. The menu may vary according to season and availability.",
+    "card.note": "Our dishes may contain allergens or be prepared in environments where allergens are present. Please ask our staff for any information.",
     "card.wineNote": "Labels, vintages and availability may vary. Ask our staff for today's recommendation.",
     "hero.overline": "Grill & Cuisine",
     "hero.hours": "<span>OPEN ALL YEAR</span> CHARCOAL GRILL - LIGURIAN CUISINE - MUSHROOMS - TRUFFLES",
@@ -163,6 +165,8 @@ const translations = {
     "location.terrace1": "Inside dining room",
     "location.terrace2": "Outdoor dining",
     "location.terrace3": "The garden",
+    "location.dehors": "The outdoor area",
+    "location.gardenTables": "Garden tables",
     "reviews.kicker": "03 Reviews",
     "reviews.title": "What guests say",
     "reviews.awards": "Review channels",
@@ -194,24 +198,24 @@ const translations = {
     "legal.notes": "Legal notes",
     "legal.manageCookies": "Manage cookies",
     "cookie.title": "Privacy and external services",
-    "cookie.copy": "We only use technical tools. To open WhatsApp from forms or load Google Maps, we ask for your consent to external services first.",
+    "cookie.copy": "We only use technical tools. Google Maps loads only after consent to external services.",
     "cookie.necessary": "Necessary only",
     "cookie.accept": "Accept external services",
     "cookie.preferences": "Details",
     "map.notice": "Google Maps is loaded only after consent to external services.",
     "map.load": "Load map",
     "form.kicker": "Message us on WhatsApp",
-    "form.title": "Tell us<br><em>what you need.</em>",
-    "form.intro": "Complete the fields: we will prepare your message and ask for consent before opening WhatsApp.",
+    "form.title": "Book<br><em>your table.</em>",
+    "form.intro": "Enter the essential details: we prepare your message and open WhatsApp.",
     "form.name": "Full name *",
-    "form.date": "Date",
-    "form.time": "Time",
-    "form.guests": "Guests",
+    "form.date": "Date *",
+    "form.time": "Time *",
+    "form.guests": "Guests *",
     "form.choose": "Select",
     "form.message": "Message",
     "form.placeholder": "Requests or useful information",
     "form.submit": "Continue on WhatsApp",
-    "form.note": "No data is stored on this website: we ask for consent to external services before opening WhatsApp.",
+    "form.note": "No data is stored on this website: WhatsApp opens with the message already filled in.",
   },
 };
 
@@ -221,43 +225,229 @@ const menuCatalogs = {
       it: {
         kicker: "La Beccaccia · Menu 2026",
         title: "Il nostro<br><em>menù.</em>",
-        description: "Antipasti, pasta fresca, brace, contorni e dessert. La carta può variare secondo stagione e disponibilità.",
+        description: "Menu digitale completo con aperitivi, bocconi, antipasti, pasta fresca, secondi, brace, contorni e proposte stagionali.",
       },
       en: {
         kicker: "La Beccaccia · 2026 menu",
         title: "Our<br><em>menu.</em>",
-        description: "Starters, fresh pasta, grill, side dishes and desserts. The menu may vary according to season and availability.",
+        description: "A complete digital menu with aperitifs, bites, starters, fresh pasta, mains, grill, sides and seasonal proposals.",
       },
     },
     sections: [
       {
-        it: "Antipasti", en: "Starters",
+        it: "Benvenuti",
+        en: "Welcome",
         items: [
-          { it: "Millefoglie d'Anatra", en: "Duck millefeuille", price: "€ 22,00" },
-          { it: "Il Tagliere Rustico", en: "Rustic board", price: "€ 19,00" },
-          { it: "Finto Foie Gras", en: "Finto Foie Gras", price: "€ 18,00" },
-          { it: "Giardino in Tavola", en: "Garden on the table", price: "€ 18,00" },
+          {
+            it: "Brace e Cucina dal 1970",
+            en: "Grill and cuisine since 1970",
+            description: {
+              it: "In un angolo tranquillo di Rapallo, tra il profumo della legna arsa e il calore del braciere a vista, nel 1970 nasce La Beccaccia. Da noi la tradizione incontra la creatività e la nostra brace non è solo cottura, è un rito. Molte ricette parlano ligure con un'anima curiosa; le altre nascono da un'attenta ricerca nelle cucine contemporanee di tutto il mondo. Alessandro e Lisa, insieme allo Chef, firmano il menù con passione, tradizione, innovazione e una ricerca assidua della qualità delle materie prime.",
+              en: "In a quiet corner of Rapallo, among the scent of burning wood and the warmth of the open grill, La Beccaccia was born in 1970. Tradition meets creativity here, and our grill is not just cooking: it is a ritual. Many recipes speak Ligurian with a curious soul; others come from careful research into contemporary kitchens around the world. Alessandro and Lisa, together with the Chef, shape the menu around passion, tradition, innovation and a constant pursuit of quality ingredients.",
+            },
+            tags: ["traditional"],
+          },
         ],
       },
       {
-        it: "Primi piatti", en: "Pasta",
+        it: "Aperitivi",
+        en: "Aperitifs",
+        note: {
+          it: "Gli aperitivi vengono tutti serviti con degli stuzzichini di benvenuto.",
+          en: "All aperitifs are served with welcome bites.",
+        },
         items: [
-          { it: "La Beccaccia", en: "La Beccaccia", sub: "Minimo per 2 persone", price: "€ 20,00 p.p." },
-          { it: "Pansoti au sö", en: "Pansoti au sö", price: "€ 22,00" },
-          { it: "La Carlona", en: "La Carlona", price: "€ 20,00" },
+          { it: "Gin Lemon", en: "Gin Lemon", description: { it: "Gin a scelta", en: "Gin of your choice" }, price: "€ 15,00" },
+          { it: "Aperol/Campari Spritz", en: "Aperol/Campari Spritz", price: "€ 15,00" },
+          { it: "Sangria", en: "Sangria", description: { it: "1 lt", en: "1 litre" }, price: "€ 20,00" },
+          { it: "Sangria", en: "Sangria", description: { it: "1/2 lt", en: "1/2 litre" }, price: "€ 12,00" },
         ],
       },
       {
-        it: "Selezione di carne", en: "Meat selection",
+        it: "Brindisi & Bocconi",
+        en: "Toasts & bites",
         items: [
-          { it: "Il Maialino", en: "Slow-cooked suckling pig", price: "€ 23,00" },
-          { it: "Filetto come un Cappon Magro", en: "Fillet, Cappon Magro style", price: "€ 39,00" },
-          { it: "Maschetta Fondente", en: "Confit beef cheek", price: "€ 25,00" },
-          { it: "Cruda in Riviera", en: "Knife-cut Fassona tartare", price: "€ 22,00" },
-          { it: "Costata o Fiorentina di Fassona Piemontese", en: "Fassona rib steak or Fiorentina", price: "€ 6,40 / etto" },
+          {
+            it: "Cristallo, Orto e Liguria",
+            en: "Cristallo, garden and Liguria",
+            year: "2026",
+            description: {
+              it: "Pan de Cristal, filetto di San Marzano marinato, acciughe salate del Mar Ligure e stracciatella di bufala.",
+              en: "Pan de Cristal, marinated San Marzano fillet, salted Ligurian Sea anchovies and buffalo stracciatella.",
+            },
+            price: "€ 20,00",
+            tags: ["traditional"],
+          },
+          {
+            it: "Il Maialino",
+            en: "Suckling pig",
+            year: "2021",
+            description: {
+              it: "Spalla di maialino cotta a bassa temperatura per 24 ore, laccata con la sua salsa, patate arrosto e giardiniera di verdure.",
+              en: "Suckling pig shoulder cooked at low temperature for 24 hours, lacquered with its sauce, roast potatoes and vegetable giardiniera.",
+            },
+            price: "€ 23,00",
+            tags: ["glutenFree"],
+          },
+          {
+            it: "La Beccaccia",
+            en: "La Beccaccia",
+            year: "2022",
+            description: {
+              it: "Fettuccine di pasta fresca all'uovo al burro d'alpeggio, mantecate al momento nella forma di Parmigiano Reggiano \"Vacche Rosse\" e servite con pentolino di Toccu alla Genovese a parte. Minimo per 2 persone.",
+              en: "Fresh egg fettuccine with alpine butter, finished at the table inside a wheel of Parmigiano Reggiano \"Vacche Rosse\" and served with Toccu alla Genovese on the side. Minimum for 2 people.",
+            },
+            price: "€ 20,00 p.p.",
+            tags: ["traditional"],
+          },
+          {
+            it: "Filetto come un Cappon Magro",
+            en: "Fillet like a Cappon Magro",
+            year: "2026",
+            description: {
+              it: "Filetto alla brace con verdure marinate e salsa verde del Cappon Magro genovese, in una rivisitazione della tradizione ligure.",
+              en: "Grilled fillet with marinated vegetables and Genovese Cappon Magro green sauce, reinterpreting Ligurian tradition.",
+            },
+            price: "€ 39,00",
+            tags: ["traditional"],
+          },
+        ],
+      },
+      {
+        it: "In Stagione",
+        en: "In season",
+        note: {
+          it: "Indicativamente da luglio a gennaio.",
+          en: "Approximately from July to January.",
+        },
+        items: [
+          {
+            it: "Funghi Porcini e Tartufi Bianchi e Neri",
+            en: "Porcini mushrooms and white and black truffles",
+            description: {
+              it: "Proposte stagionali secondo disponibilità.",
+              en: "Seasonal proposals depending on availability.",
+            },
+            price: "Secondo disponibilità",
+            tags: ["seasonal"],
+          },
+          {
+            it: "Aragosta, Scampi e Gamberoni di S. Margherita",
+            en: "Lobster, scampi and king prawns from S. Margherita",
+            description: {
+              it: "Solo su prenotazione.",
+              en: "By reservation only.",
+            },
+            price: "Su prenotazione",
+            tags: ["reservation"],
+          },
+        ],
+      },
+      {
+        it: "Per iniziare", en: "Starters",
+        items: [
+          {
+            it: "Millefoglie d'Anatra",
+            en: "Duck millefeuille",
+            description: {
+              it: "Petto d'anatra marinato e alla brace, crema di mela, amarena, finocchio all'arancia e croccante di carta musica.",
+              en: "Marinated grilled duck breast, apple cream, sour cherry, orange fennel and crisp carta musica bread.",
+            },
+            price: "€ 22,00",
+          },
+          {
+            it: "Il Tagliere Rustico",
+            en: "Rustic board",
+            description: {
+              it: "Coppa artigianale stagionata, la nostra insalata russa classica e le tipiche focaccette genovesi ripiene di stracchino.",
+              en: "Aged artisanal coppa, our classic Russian salad and typical Genovese focaccette filled with stracchino.",
+            },
+            price: "€ 19,00",
+            tags: ["traditional"],
+          },
+          {
+            it: "Finto Foie Gras",
+            en: "Faux foie gras",
+            description: {
+              it: "Pain perdu alla francese con fegatini di vitello, lardo di Patanegra, confettura di fichi e caviale di aceto balsamico di Modena.",
+              en: "French-style pain perdu with veal liver, Patanegra lardo, fig preserve and Modena balsamic vinegar caviar.",
+            },
+            price: "€ 18,00",
+          },
+          {
+            it: "Giardino in Tavola",
+            en: "Garden on the table",
+            description: {
+              it: "Flan di zucchina trombetta su leggera fonduta di formaggio, zabajone salato e zucchina marinata.",
+              en: "Trombetta courgette flan on a light cheese fondue, savoury zabaglione and marinated courgette.",
+            },
+            price: "€ 18,00",
+            tags: ["glutenFree", "vegetarian"],
+          },
+        ],
+      },
+      {
+        it: "La Pasta", en: "Fresh pasta",
+        items: [
+          {
+            it: "Pansoti au sö (Pansoti al Sole)",
+            en: "Pansoti au sö (sun pansoti)",
+            description: {
+              it: "I veri pansoti genovesi fatti a mano, ripieni di borragine secondo tradizione ligure, serviti con vellutata di datterino giallo alla brace e riduzione di basilico genovese.",
+              en: "Handmade Genovese pansoti filled with borage according to Ligurian tradition, served with grilled yellow datterino tomato velouté and Genovese basil reduction.",
+            },
+            price: "€ 22,00",
+            tags: ["traditional", "vegetarian"],
+          },
+          {
+            it: "La Carlona",
+            en: "La Carlona",
+            description: {
+              it: "Taglierini di pasta fresca all'uovo con ragù di coniglio in bianco alla ligure.",
+              en: "Fresh egg taglierini with white Ligurian rabbit ragù.",
+            },
+            price: "€ 20,00",
+            tags: ["traditional"],
+          },
+        ],
+      },
+      {
+        it: "Secondi", en: "Second courses",
+        items: [
+          {
+            it: "Maschetta Fondente",
+            en: "Melting beef cheek",
+            description: {
+              it: "Guancia di manzo confit cotta a 63°, il suo fondo e accompagnata da puré di patate alla Robuchon.",
+              en: "Confit beef cheek cooked at 63°C, served with its jus and Robuchon-style potato purée.",
+            },
+            price: "€ 25,00",
+            tags: ["glutenFree"],
+          },
+          {
+            it: "Cruda in Riviera",
+            en: "Raw Fassona in Riviera style",
+            description: {
+              it: "Tartare di Fassona Piemontese a coltello, emulsione al basilico e olio D.O.P. Genovese, acciuga salata del Mar Ligure, crumble di focaccia, pomodorino confit e frutto del cappero.",
+              en: "Knife-cut Piedmontese Fassona tartare, basil and Genovese D.O.P. olive oil emulsion, salted Ligurian Sea anchovy, focaccia crumble, confit tomato and caper berry.",
+            },
+            price: "€ 22,00",
+            tags: ["traditional"],
+          },
+        ],
+      },
+      {
+        it: "Alla Brace",
+        en: "From the grill",
+        note: {
+          it: "La nostra prima scelta, da sempre.",
+          en: "Our first choice, as always.",
+        },
+        items: [
+          { it: "Costata o Fiorentina di Fassona Piemontese", en: "Piedmontese Fassona rib steak or Fiorentina", price: "€ 6,40 / etto" },
           { it: "Tomahawk di Scottona Bavarese", en: "Bavarian heifer tomahawk", price: "€ 6,50 / etto" },
-          { it: "Costata Iberica", en: "Iberian rib steak", price: "€ 7,50 / etto" },
-          { it: "Picanha di vacca bionda spagnola", en: "Spanish blonde cow picanha", price: "€ 33,00" },
+          { it: "Costata \"Iberica\"", en: "Iberian rib steak", price: "€ 7,50 / etto" },
+          { it: "Picanha di vacca bionda Spagnola", en: "Spanish blonde cow picanha", description: { it: "Circa 250 g", en: "About 250 g" }, price: "€ 30,00" },
         ],
       },
       {
@@ -269,13 +459,9 @@ const menuCatalogs = {
         ],
       },
       {
-        it: "Dessert", en: "Desserts",
+        it: "Servizio", en: "Service",
         items: [
-          { it: "Il Beccaccino", en: "Il Beccaccino", price: "€ 10,00" },
-          { it: "Bianco Mangiare", en: "Bianco Mangiare", price: "€ 8,00" },
-          { it: "Verticale al cioccolato", en: "Chocolate vertical", price: "€ 9,00" },
-          { it: "Torta della Nonna", en: "Torta della Nonna", price: "€ 9,00" },
-          { it: "Frutta ... Gelato", en: "Fruit ... Gelato", price: "€ 8,00" },
+          { it: "Pane, Coperto e Servizio", en: "Bread, cover and service", price: "€ 4,00" },
         ],
       },
     ],
@@ -488,29 +674,28 @@ const catalogNote = cardModal?.querySelector(".catalog-note");
 let activeCardType = "food";
 let cardCloseTimer;
 
+const catalogTagLabels = {
+  it: {
+    glutenFree: "Gluten Free",
+    reservation: "Solo su prenotazione",
+    seasonal: "Stagionale",
+    traditional: "Tradizionale",
+    vegetarian: "Vegetariano",
+  },
+  en: {
+    glutenFree: "Gluten Free",
+    reservation: "By reservation",
+    seasonal: "Seasonal",
+    traditional: "Traditional",
+    vegetarian: "Vegetarian",
+  },
+};
+
 const findSection = (sections, label) => sections.find((section) => section.it === label);
 
 const getOrderedCatalogSections = (type, sections) => {
   if (type === "food") {
-    const starters = findSection(sections, "Antipasti");
-    const firstCourses = findSection(sections, "Primi piatti");
-    const fishSeconds = findSection(sections, "Secondi di pesce");
-    const meatSeconds = findSection(sections, "Selezione di carne");
-    const sideDishes = findSection(sections, "Contorni");
-    const desserts = findSection(sections, "Dessert");
-    const secondCourses = {
-      it: "Secondi",
-      en: "Second courses",
-      items: [...(fishSeconds?.items || []), ...(meatSeconds?.items || [])],
-    };
-
-    return [
-      starters,
-      firstCourses ? { ...firstCourses, it: "Primi", en: "First courses" } : null,
-      secondCourses.items.length ? secondCourses : null,
-      sideDishes,
-      desserts,
-    ].filter(Boolean);
+    return sections;
   }
 
   if (type === "wine") {
@@ -518,6 +703,23 @@ const getOrderedCatalogSections = (type, sections) => {
   }
 
   return sections;
+};
+
+const getLocalizedDescription = (item) => {
+  if (item.description?.[currentLanguage]) return item.description[currentLanguage];
+  if (typeof item.sub === "string") return item.sub;
+  if (item.sub?.[currentLanguage]) return item.sub[currentLanguage];
+  return item[currentLanguage === "it" ? "en" : "it"] || "";
+};
+
+const renderCatalogMeta = (item) => {
+  const tags = (item.tags || []).map((tag) => catalogTagLabels[currentLanguage][tag] || tag);
+  const meta = [
+    item.year ? `<span class="catalog-item-year">${item.year}</span>` : "",
+    ...tags.map((tag) => `<span class="catalog-item-tag">${tag}</span>`),
+  ].filter(Boolean);
+
+  return meta.length ? `<div class="catalog-item-meta">${meta.join("")}</div>` : "";
 };
 
 const renderCatalog = () => {
@@ -531,17 +733,24 @@ const renderCatalog = () => {
   if (catalogNote) catalogNote.textContent = translations[currentLanguage][activeCardType === "food" ? "card.note" : "card.wineNote"];
   cardContent.innerHTML = sections.map((section) => `
     <section class="catalog-section">
-      <h3>${section[currentLanguage]}<small>${section[currentLanguage === "it" ? "en" : "it"]}</small></h3>
+      <div class="catalog-section-heading">
+        <h3>${section[currentLanguage]}<small>${section[currentLanguage === "it" ? "en" : "it"]}</small></h3>
+        ${section.note?.[currentLanguage] ? `<p class="catalog-section-note">${section.note[currentLanguage]}</p>` : ""}
+      </div>
       <div class="catalog-items">
-        ${section.items.map((item) => `
+        ${section.items.map((item) => {
+          const description = getLocalizedDescription(item);
+          return `
           <article class="catalog-item">
             <div>
               <h4>${item[currentLanguage] || item.it}</h4>
-              ${(item.sub || item[currentLanguage === "it" ? "en" : "it"]) ? `<p>${item.sub || item[currentLanguage === "it" ? "en" : "it"]}</p>` : ""}
+              ${description ? `<p>${description}</p>` : ""}
+              ${renderCatalogMeta(item)}
             </div>
             ${item.price ? `<span>${item.price}</span>` : ""}
           </article>
-        `).join("")}
+        `;
+        }).join("")}
       </div>
     </section>
   `).join("");
@@ -870,7 +1079,6 @@ bookingForm?.addEventListener("submit", (event) => {
   const date = String(data.get("date") || "").trim();
   const time = String(data.get("time") || "").trim();
   const guests = String(data.get("guests") || "").trim();
-  const note = String(data.get("message") || "").trim();
   const formattedDate = date
     ? new Intl.DateTimeFormat(isEnglish ? "en-GB" : "it-IT", { day: "2-digit", month: "2-digit", year: "numeric" }).format(new Date(`${date}T12:00:00`))
     : "";
@@ -888,16 +1096,10 @@ bookingForm?.addEventListener("submit", (event) => {
       ].filter(Boolean).join(" ");
 
   const message = isEnglish
-    ? [
-        `Hello La Beccaccia, my name is ${name} and I would like to book a table${details ? ` ${details}` : ""}.`,
-        note ? `\n${note}` : "",
-      ].join("")
-    : [
-        `Ciao La Beccaccia, sono ${name} e vorrei prenotare un tavolo${details ? ` ${details}` : ""}.`,
-        note ? `\n${note}` : "",
-      ].join("");
+    ? `Hello La Beccaccia, my name is ${name} and I would like to book a table${details ? ` ${details}` : ""}.`
+    : `Ciao La Beccaccia, sono ${name} e vorrei prenotare un tavolo${details ? ` ${details}` : ""}.`;
 
-  requestExternalUrl(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
+  openExternalUrl(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
 });
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
