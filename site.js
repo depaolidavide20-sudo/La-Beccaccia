@@ -42,6 +42,7 @@ const translations = {
     skip: "Vai al contenuto",
     "nav.restaurant": "Ristorante",
     "nav.location": "Location",
+    "nav.events": "Eventi",
     "nav.reviews": "Recensioni",
     "nav.contacts": "Contatti",
     "cta.book": "PRENOTA ONLINE",
@@ -64,11 +65,11 @@ const translations = {
     "hero.hours": "<span>APERTO TUTTO L'ANNO</span> CARNE ALLA BRACE - CUCINA LIGURE - FUNGHI - TARTUFI",
     "hero.edge": "Brace, funghi & tradizione ligure",
     "hero.discover": "Scopri La Beccaccia",
-    "hero.manifesto": "Ristorante a Rapallo.<br>Cucina ligure, brace e tartufo.",
+    "hero.openYear": "Aperti tutto l'anno",
+    "hero.manifesto": "Cucina ligure contemporanea · Carne alla brace<br><span class=\"hero-specialties\">Tartufi · Funghi · Cantina con oltre 500 etichette</span>",
     "restaurant.kicker": "01 Ristorante",
-    "restaurant.copy1": "Carne alla brace, pasta fresca fatta in casa e cucina ligure contemporanea sulle prime alture di Rapallo.",
-    "restaurant.copy2": "Una tavola calda, curata e concreta, costruita intorno a materia prima, brace e stagionalità.",
-    "restaurant.mobileCopy": "Brace, pasta fresca e cucina ligure a Rapallo.",
+    "restaurant.copy1": "Cucina ligure contemporanea, materia prima e stagionalità guidano una carta che incontra il fuoco della brace, i tartufi e i funghi.",
+    "restaurant.copy2": "La cantina raccoglie oltre 500 etichette, selezionate per accompagnare ogni percorso.",
     "location.kicker": "02 Location",
     "location.copy1": "Via Santa Maria del Campo 176, sulle prime alture di Rapallo.",
     "location.copy2": "Sala, grande braciere a vista, veranda e giardino per pranzi e cene.",
@@ -107,6 +108,7 @@ const translations = {
     "contacts.where": "Dove siamo",
     "contacts.hoursLabel": "Orari",
     "contacts.hours": "Da martedì a sabato 19:30-23:00<br>Domenica 12:30-15:00 e 19:30-23:00<br>Chiuso il lunedì",
+    "contacts.openYear": "Aperti tutto l'anno",
     "contacts.phone": "Telefono",
     "contacts.email": "Email",
     "contacts.socialLabel": "Email",
@@ -165,6 +167,7 @@ const translations = {
     skip: "Skip to content",
     "nav.restaurant": "Restaurant",
     "nav.location": "Location",
+    "nav.events": "Events",
     "nav.reviews": "Reviews",
     "nav.contacts": "Contacts",
     "cta.book": "BOOK ONLINE",
@@ -187,11 +190,11 @@ const translations = {
     "hero.hours": "<span>OPEN ALL YEAR</span> CHARCOAL GRILL - LIGURIAN CUISINE - MUSHROOMS - TRUFFLES",
     "hero.edge": "Grill, mushrooms & Ligurian tradition",
     "hero.discover": "Discover La Beccaccia",
-    "hero.manifesto": "Restaurant in Rapallo.<br>Ligurian cuisine, grill and truffle.",
+    "hero.openYear": "Open all year",
+    "hero.manifesto": "Contemporary Ligurian cuisine · Charcoal-grilled meat<br><span class=\"hero-specialties\">Truffles · Mushrooms · Wine cellar with over 500 labels</span>",
     "restaurant.kicker": "01 Restaurant",
-    "restaurant.copy1": "Charcoal-grilled meat, handmade fresh pasta and contemporary Ligurian cuisine on the first hills of Rapallo.",
-    "restaurant.copy2": "A warm, curated and concrete table built around ingredients, fire and seasonality.",
-    "restaurant.mobileCopy": "Grill, fresh pasta and Ligurian cuisine in Rapallo.",
+    "restaurant.copy1": "Contemporary Ligurian cuisine, fine ingredients and seasonality shape a menu inspired by the grill, truffles and mushrooms.",
+    "restaurant.copy2": "The cellar brings together over 500 labels, selected to complement every dining journey.",
     "location.kicker": "02 Location",
     "location.copy1": "Via Santa Maria del Campo 176, on the first hills of Rapallo.",
     "location.copy2": "Dining room, open grill, veranda and garden for lunch and dinner.",
@@ -230,6 +233,7 @@ const translations = {
     "contacts.where": "Find us",
     "contacts.hoursLabel": "Opening hours",
     "contacts.hours": "Tuesday to Saturday 7:30 PM-11:00 PM<br>Sunday 12:30 PM-3:00 PM and 7:30 PM-11:00 PM<br>Closed on Monday",
+    "contacts.openYear": "Open all year",
     "contacts.phone": "Phone",
     "contacts.email": "Email",
     "contacts.socialLabel": "Email",
@@ -291,12 +295,12 @@ const menuCatalogs = {
     intro: {
       it: {
         kicker: "La Beccaccia · Menu 2026",
-        title: "Il nostro<br><em>menù.</em>",
+        title: "Il nostro <em>menù.</em>",
         description: "Menu digitale completo con aperitivi, bocconi, antipasti, pasta fresca, secondi, brace, contorni e proposte stagionali.",
       },
       en: {
         kicker: "La Beccaccia · 2026 menu",
-        title: "Our<br><em>menu.</em>",
+        title: "Our <em>menu.</em>",
         description: "A complete digital menu with aperitifs, bites, starters, fresh pasta, mains, grill, sides and seasonal proposals.",
       },
     },
@@ -578,6 +582,7 @@ const menuCatalogs = {
 };
 
 let currentLanguage = "it";
+let currentMenuLanguage = "it";
 
 const getFocusableElements = (container) => {
   if (!container) return [];
@@ -778,14 +783,14 @@ const getOrderedCatalogSections = (type, sections) => {
 };
 
 const getLocalizedDescription = (item) => {
-  if (item.description?.[currentLanguage]) return item.description[currentLanguage];
+  if (item.description?.[currentMenuLanguage]) return item.description[currentMenuLanguage];
   if (typeof item.sub === "string") return item.sub;
-  if (item.sub?.[currentLanguage]) return item.sub[currentLanguage];
-  return item[currentLanguage === "it" ? "en" : "it"] || "";
+  if (item.sub?.[currentMenuLanguage]) return item.sub[currentMenuLanguage];
+  return item[currentMenuLanguage === "it" ? "en" : "it"] || "";
 };
 
 const renderCatalogMeta = (item) => {
-  const tags = (item.tags || []).map((tag) => catalogTagLabels[currentLanguage][tag] || tag);
+  const tags = (item.tags || []).map((tag) => catalogTagLabels[currentMenuLanguage][tag] || tag);
   const meta = [
     item.year ? `<span class="catalog-item-year">${item.year}</span>` : "",
     ...tags.map((tag) => `<span class="catalog-item-tag">${tag}</span>`),
@@ -797,17 +802,17 @@ const renderCatalogMeta = (item) => {
 const renderCatalog = () => {
   if (!cardContent || !cardKicker || !cardTitle || !cardDescription) return;
   const catalog = menuCatalogs[activeCardType];
-  const intro = catalog.intro[currentLanguage];
+  const intro = catalog.intro[currentMenuLanguage];
   const sections = getOrderedCatalogSections(activeCardType, catalog.sections);
   cardKicker.textContent = intro.kicker;
   cardTitle.innerHTML = intro.title;
   cardDescription.textContent = intro.description;
-  if (catalogNote) catalogNote.textContent = translations[currentLanguage][activeCardType === "food" ? "card.note" : "card.wineNote"];
+  if (catalogNote) catalogNote.textContent = translations[currentMenuLanguage][activeCardType === "food" ? "card.note" : "card.wineNote"];
   cardContent.innerHTML = sections.map((section) => `
     <section class="catalog-section">
       <div class="catalog-section-heading">
-        <h3>${section[currentLanguage]}<small>${section[currentLanguage === "it" ? "en" : "it"]}</small></h3>
-        ${section.note?.[currentLanguage] ? `<p class="catalog-section-note">${section.note[currentLanguage]}</p>` : ""}
+        <h3>${section[currentMenuLanguage]}<small>${section[currentMenuLanguage === "it" ? "en" : "it"]}</small></h3>
+        ${section.note?.[currentMenuLanguage] ? `<p class="catalog-section-note">${section.note[currentMenuLanguage]}</p>` : ""}
       </div>
       <div class="catalog-items">
         ${section.items.map((item) => {
@@ -815,7 +820,7 @@ const renderCatalog = () => {
           return `
           <article class="catalog-item">
             <div>
-              <h4>${item[currentLanguage] || item.it}</h4>
+              <h4>${item[currentMenuLanguage] || item.it}</h4>
               ${description ? `<p>${description}</p>` : ""}
               ${renderCatalogMeta(item)}
             </div>
@@ -877,6 +882,12 @@ const openCardModal = (type, trigger) => {
   window.clearTimeout(cardCloseTimer);
   lastFocusedElement = trigger || document.activeElement;
   setMenu(false, false);
+  currentMenuLanguage = currentLanguage;
+  cardModal.querySelectorAll("[data-card-language]").forEach((button) => {
+    const active = button.dataset.cardLanguage === currentMenuLanguage;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
   setCardType(type);
   cardModal.hidden = false;
   cardModal.setAttribute("aria-hidden", "false");
@@ -887,6 +898,19 @@ const openCardModal = (type, trigger) => {
     window.setTimeout(() => cardModal.querySelector("[data-card-close]")?.focus(), 260);
   });
 };
+
+cardModal?.querySelectorAll("[data-card-language]").forEach((button) => {
+  button.addEventListener("click", () => {
+    currentMenuLanguage = button.dataset.cardLanguage === "en" ? "en" : "it";
+    cardModal.querySelectorAll("[data-card-language]").forEach((option) => {
+      const active = option.dataset.cardLanguage === currentMenuLanguage;
+      option.classList.toggle("is-active", active);
+      option.setAttribute("aria-selected", String(active));
+    });
+    renderCatalog();
+    if (cardBody) cardBody.scrollTop = 0;
+  });
+});
 
 const closeCardModal = () => {
   if (!cardModal || cardModal.hidden) return;

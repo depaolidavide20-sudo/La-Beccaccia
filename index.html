@@ -13,6 +13,7 @@
     <meta property="og:url" content="https://www.ristorantelabeccacciarapallo.it/" />
     <title>La Beccaccia Rapallo | Brace e cucina a Rapallo</title>
     <link rel="canonical" href="https://www.ristorantelabeccacciarapallo.it/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preload" as="image" href="assets/hero/hero-fire-desktop.jpg" type="image/jpeg" media="(orientation: landscape)" />
     <link rel="preload" as="image" href="assets/hero/hero-fire-mobile.jpg" type="image/jpeg" media="(orientation: portrait)" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,6 +36,7 @@
   <nav class="desktop-nav" aria-label="Navigazione principale">
     <a href="#ristorante" data-i18n="nav.restaurant">Ristorante</a>
     <a href="#location" data-i18n="nav.location">Location</a>
+    <a href="#eventi" data-i18n="nav.events">Eventi</a>
     <a href="#recensioni" data-i18n="nav.reviews">Recensioni</a>
     <a href="#contatti" data-i18n="nav.contacts">Contatti</a>
   </nav>
@@ -47,7 +49,6 @@
     </div>
     <a class="book-link" href="https://ristorantelabeccaccia.plateform.app/" target="_blank" rel="noreferrer" data-online-booking>
       <span data-i18n="cta.book">PRENOTA ONLINE</span>
-      <svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5"></path><path d="M9 5h10v10"></path></svg>
     </a>
     <button class="menu-toggle" type="button" aria-label="Apri il menù" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span>
@@ -62,8 +63,9 @@
     <nav aria-label="Navigazione mobile">
       <a href="#ristorante"><span>01</span><b data-i18n="nav.restaurant">Ristorante</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
       <a href="#location"><span>02</span><b data-i18n="nav.location">Location</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
-      <a href="#recensioni"><span>03</span><b data-i18n="nav.reviews">Recensioni</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
-      <a href="#contatti"><span>04</span><b data-i18n="nav.contacts">Contatti</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#eventi"><span>03</span><b data-i18n="nav.events">Eventi</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#recensioni"><span>04</span><b data-i18n="nav.reviews">Recensioni</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
+      <a href="#contatti"><span>05</span><b data-i18n="nav.contacts">Contatti</b><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5 19 19"></path><path d="M10 19h9v-9"></path></svg></a>
     </nav>
     <a class="menu-book" href="https://ristorantelabeccaccia.plateform.app/" target="_blank" rel="noreferrer" data-online-booking>
       <span data-i18n="cta.bookTable">PRENOTA ONLINE</span>
@@ -129,15 +131,19 @@
           <span>Facebook</span>
         </a>
       </div>
-      <div class="hero-whatsapp-action" aria-label="WhatsApp La Beccaccia">
-        <button class="hero-social-link hero-whatsapp-link" type="button" data-booking-trigger aria-label="Richiedi un tavolo su WhatsApp">
-          <svg class="whatsapp-cta-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path class="whatsapp-icon-mark" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.051 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.999-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.436-9.884 9.889-9.884a9.822 9.822 0 0 1 6.988 2.899 9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.883-9.887 9.883M20.52 3.449A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.946L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.52 3.449"></path>
+      <div class="hero-google-action" aria-label="Recensioni Google La Beccaccia">
+        <a class="hero-social-link hero-google-link" href="https://www.google.com/search?q=la+beccaccia+rapallo+recensioni&amp;sca_esv=d11bf3d68244a04c&amp;rlz=1C5CHFA_enIT984IT984&amp;sxsrf=APpeQnt3lkRlRtYAbXRWGcu_Osw6-K3D2Q%3A1792005750695&amp;ei=dtbPavT3KaG9i-gP0eShyA4&amp;biw=1029&amp;bih=704&amp;oq=beccaccia+rapallo+rece&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiFmJlY2NhY2NpYSByYXBhbGxvIHJlY2UqBggAGBYYHjIGEAAYFhgeMggQABiJBRiiBDIIEAAYgAQYogQyCBAAGIAEGKIEMgUQABjvBUi3F1DzA1iuCnABeAGQAQCYAXWgAYQEqgEDMi4zuAEByAEA-AEBmAIGoAKuBMICChAAGEcY1gQYsAPCAgIQJpgDAIgGAZAGCJIHAzIuNKAH6RmyBwMxLjS4B6gEwgcDMi02yAcbgAgB&amp;sclient=gws-wiz-serp#lrd=0x12d35f8621723a05:0xe7d607b8e03b54f7,3,,,," target="_blank" rel="noreferrer" aria-label="Leggi le recensioni di La Beccaccia su Google">
+          <svg class="google-g-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="#4285F4" d="M21.6 12.23c0-.71-.06-1.4-.18-2.06H12v3.9h5.38a4.6 4.6 0 0 1-2 3.02v2.53h3.24c1.9-1.75 2.98-4.33 2.98-7.39Z"></path>
+            <path fill="#34A853" d="M12 22c2.7 0 4.97-.9 6.62-2.38l-3.24-2.53c-.9.6-2.05.96-3.38.96-2.61 0-4.82-1.76-5.61-4.13H3.04v2.61A10 10 0 0 0 12 22Z"></path>
+            <path fill="#FBBC05" d="M6.39 13.92A6.02 6.02 0 0 1 6.08 12c0-.67.12-1.32.31-1.92V7.47H3.04A10 10 0 0 0 2 12c0 1.61.38 3.14 1.04 4.53l3.35-2.61Z"></path>
+            <path fill="#EA4335" d="M12 5.95c1.47 0 2.79.51 3.83 1.5l2.87-2.88A9.62 9.62 0 0 0 12 2a10 10 0 0 0-8.96 5.47l3.35 2.61C7.18 7.71 9.39 5.95 12 5.95Z"></path>
           </svg>
-          <span data-i18n="cta.whatsappBooking">WhatsApp tavolo</span>
-        </button>
+          <span>Recensioni Google</span>
+        </a>
       </div>
-      <p class="hero-manifesto" data-i18n-html="hero.manifesto">Ristorante a Rapallo.<br />Cucina ligure, brace e tartufo.</p>
+      <p class="hero-open-year" data-i18n="hero.openYear">Aperti tutto l'anno</p>
+      <p class="hero-manifesto" data-i18n-html="hero.manifesto">Cucina ligure contemporanea · Carne alla brace<br /><span class="hero-specialties">Tartufi · Funghi · Cantina con oltre 500 etichette</span></p>
       <div class="hero-actions" aria-label="Azioni principali">
         <a class="hero-primary" href="https://ristorantelabeccaccia.plateform.app/" target="_blank" rel="noreferrer" data-online-booking>
           <span data-i18n="cta.heroBook">PRENOTA ONLINE</span>
@@ -164,10 +170,9 @@
       <h2 data-i18n="nav.restaurant">Ristorante</h2>
       <div class="heading-copy">
         <p data-i18n="restaurant.copy1">
-          Carne alla brace, pasta fresca fatta in casa e cucina ligure contemporanea sulle prime alture di Rapallo.
+          Cucina ligure contemporanea, materia prima e stagionalità guidano una carta che incontra il fuoco della brace, i tartufi e i funghi.
         </p>
-        <p data-i18n="restaurant.copy2">Una tavola calda, curata e concreta, costruita intorno a materia prima, brace e stagionalità.</p>
-        <p class="restaurant-mobile-copy" data-i18n="restaurant.mobileCopy">Brace, pasta fresca e cucina ligure a Rapallo.</p>
+        <p data-i18n="restaurant.copy2">La cantina raccoglie oltre 500 etichette, selezionate per accompagnare ogni percorso.</p>
       </div>
     </div>
 
@@ -354,6 +359,7 @@
         <div>
           <h3 data-i18n="contacts.hoursLabel">Orari</h3>
           <p data-i18n-html="contacts.hours">Pranzo e cena<br />tutti i giorni</p>
+          <p class="contact-open-year" data-i18n="contacts.openYear">Aperti tutto l'anno</p>
         </div>
         <div>
           <h3 data-i18n="contacts.email">Email</h3>
@@ -413,35 +419,6 @@
       <img src="assets/brand/la-beccaccia-logo-desktop.png" width="2172" height="724" alt="La Beccaccia Antico Ristorante" loading="lazy" decoding="async" />
     </a>
     <p data-i18n-html="footer.tagline">Brace, cucina ligure,<br />profumo di legna.</p>
-    <p class="footer-phone"><a href="tel:+393286577160">+39 328 657 7160</a></p>
-    <div class="footer-socials" aria-label="Link utili La Beccaccia">
-      <a
-        class="footer-social-link"
-        href="https://www.instagram.com/la_beccaccia_rapallo"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Segui La Beccaccia su Instagram"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-          <circle cx="12" cy="12" r="4.2"></circle>
-          <circle cx="17.5" cy="6.7" r="0.8" class="instagram-dot"></circle>
-        </svg>
-        <span>Instagram</span>
-      </a>
-      <a
-        class="footer-social-link"
-        href="https://www.ristorantelabeccacciarapallo.it/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Visita il sito di La Beccaccia"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M5 19 19 5"></path><path d="M9 5h10v10"></path>
-        </svg>
-        <span>Sito web</span>
-      </a>
-    </div>
     <a href="#top"><span data-i18n="footer.top">Torna su</span><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4"></path><path d="m6 10 6-6 6 6"></path></svg></a>
   </div>
   <div class="footer-bottom">
@@ -459,21 +436,26 @@
 <div class="card-modal" data-card-modal aria-hidden="true" hidden>
   <section class="card-dialog" role="dialog" aria-modal="true" aria-labelledby="card-title" tabindex="-1">
     <header class="card-header">
-      <a class="brand brand-mark card-brand-mark brand-wordmark" href="#top" aria-label="La Beccaccia, torna all'inizio">
-        <span>La Beccaccia</span>
+      <a class="brand brand-mark card-brand-mark" href="#top" aria-label="La Beccaccia, torna all'inizio">
+        <picture>
+          <source media="(max-width: 760px)" srcset="assets/brand/menu-logo-mobile.png" width="1254" height="1254" />
+          <img class="brand-logo-img" src="assets/brand/menu-logo-desktop.png" width="2172" height="724" alt="La Beccaccia Antico Ristorante" decoding="async" />
+        </picture>
       </a>
-      <div class="card-tabs" role="tablist" aria-label="Seleziona la carta">
-        <button class="is-active" type="button" role="tab" aria-selected="true" data-card-tab="food" data-i18n="card.food">Menù</button>
-      </div>
       <button class="card-close" type="button" aria-label="Chiudi la carta" data-card-close>
         <span></span><span></span>
       </button>
     </header>
 
+    <div class="card-tabs card-language-bar" role="tablist" aria-label="Scegli la lingua del menù">
+      <button class="is-active" type="button" role="tab" aria-selected="true" data-card-language="it">MENÙ ITA</button>
+      <button type="button" role="tab" aria-selected="false" data-card-language="en">MENU EN</button>
+    </div>
+
     <div class="card-body">
       <div class="card-intro">
         <p class="section-kicker" data-card-kicker>La Beccaccia · Menu 2026</p>
-        <h2 id="card-title" data-card-title>Il nostro<br /><em>menù.</em></h2>
+        <h2 id="card-title" data-card-title>Il nostro <em>menù.</em></h2>
         <p data-card-description>
           Antipasti, pasta fresca, brace, contorni e dessert. La carta può variare secondo stagione e disponibilità.
         </p>
@@ -612,49 +594,52 @@
     <div class="legal-content">
       <article class="legal-panel is-active" data-legal-panel="privacy">
         <h3>Informativa privacy</h3>
-        <p><strong>Ultimo aggiornamento:</strong> 30/08/2026.</p>
-        <p><strong>Titolare del trattamento:</strong> RISTORANTE LA BECCACCIA, P.IVA 02650230994, attività RISTORANTE LA BECCACCIA, Via Santa Maria del Campo 176, 16035 Rapallo (GE). Email: <a href="mailto:info@ristorantelabeccacciarapallo.it">info@ristorantelabeccacciarapallo.it</a>.</p>
-        <p>Questo sito presenta l'attività, il menu e i contatti, collega al sistema Plateform per le prenotazioni online e permette di preparare una conversazione WhatsApp per richieste su eventi o informazioni. Il sito non salva i dati inseriti nel modulo: il messaggio viene composto nel browser e WhatsApp si apre solo quando invii il form.</p>
-        <p>Il consenso è richiesto prima di caricare la mappa Google o aprire un link verso Google Maps. Se non accetti i servizi esterni, puoi comunque consultare il sito e contattare direttamente il ristorante via telefono o email.</p>
+        <p><strong>Ultimo aggiornamento:</strong> 21/10/2026.</p>
+        <p><strong>Titolare del trattamento:</strong> La Beccaccia - Brace e Cucina, P.IVA 02650230994, Via Santa Maria del Campo, 176 - 16035 Rapallo (GE). Email: <a href="mailto:info@ristorantelabeccacciarapallo.it">info@ristorantelabeccacciarapallo.it</a>.</p>
+        <p>Questa informativa descrive il trattamento dei dati personali effettuato attraverso il presente sito. Il sito presenta l'attività, il menu e i contatti, collega a Plateform per le prenotazioni online e consente di preparare richieste tramite WhatsApp. I dati inseriti nei moduli non vengono salvati dal sito: il messaggio viene composto nel browser e trasmesso soltanto quando l'utente sceglie di proseguire su WhatsApp.</p>
         <h4>Dati trattati</h4>
         <ul>
-          <li>Dati tecnici di navigazione necessari al funzionamento del sito.</li>
-          <li>Dati che inserisci volontariamente nel modulo, nelle email, nelle telefonate o nei messaggi WhatsApp, se scegli di proseguire.</li>
-          <li>Preferenza cookie/servizi esterni salvata nel browser.</li>
-          <li>Dati tecnici trasmessi a Google per il caricamento dei font e, quando scegli i relativi link, a Plateform, WhatsApp, Google Maps o social network.</li>
+          <li>Dati tecnici di navigazione, come indirizzo IP, data e ora della richiesta, tipo di browser e informazioni necessarie a sicurezza, erogazione e diagnostica del servizio.</li>
+          <li>Dati forniti volontariamente tramite email, telefono, WhatsApp o servizi di prenotazione, quali nome, recapito e contenuto della richiesta.</li>
+          <li>Preferenza relativa ai servizi esterni, salvata localmente nel browser.</li>
+          <li>Dati tecnici trasmessi a Google per i font e, solo in seguito a una scelta dell'utente, a Google Maps, Plateform, WhatsApp, Instagram o Facebook.</li>
         </ul>
         <h4>Finalità e basi giuridiche</h4>
         <ul>
-          <li>Funzionamento, sicurezza e consultazione del sito: legittimo interesse e misure tecniche necessarie.</li>
-          <li>Gestione di richieste, prenotazioni e contatti: esecuzione di misure precontrattuali o contrattuali richieste dall'utente.</li>
-          <li>Servizi esterni non essenziali, come Google Maps: consenso.</li>
+          <li>Funzionamento, sicurezza e prevenzione degli abusi: legittimo interesse del titolare.</li>
+          <li>Risposta a richieste, gestione dei contatti e delle prenotazioni: esecuzione di misure precontrattuali o contrattuali richieste dall'interessato.</li>
+          <li>Caricamento di servizi esterni non necessari, come la mappa Google: consenso, revocabile in qualsiasi momento.</li>
           <li>Adempimenti di legge: obbligo legale, quando applicabile.</li>
         </ul>
-        <h4>Conservazione, destinatari e diritti</h4>
-        <p>I dati sono conservati per il tempo necessario a gestire la richiesta e gli eventuali obblighi amministrativi o fiscali. Possono essere trattati da fornitori tecnici e, su tua iniziativa, da servizi esterni come WhatsApp, Google Maps o social network. Puoi chiedere accesso, rettifica, cancellazione, limitazione, opposizione e portabilità dei dati scrivendo all'email del titolare. Hai inoltre diritto di proporre reclamo all'Autorità Garante per la protezione dei dati personali.</p>
+        <h4>Conservazione e destinatari</h4>
+        <p>I dati sono conservati per il tempo necessario a rispondere alla richiesta e, quando nasce un rapporto contrattuale, per i successivi termini amministrativi, contabili e di legge. I dati tecnici possono essere trattati per i tempi previsti dai fornitori di hosting e sicurezza. Possono operare quali destinatari o responsabili tecnici i fornitori del sito e dell'hosting; Plateform, WhatsApp, Google, Instagram e Facebook trattano i dati secondo le rispettive informative quando l'utente utilizza i loro servizi. Eventuali trasferimenti fuori dallo Spazio Economico Europeo sono gestiti dai relativi fornitori secondo i meccanismi previsti dalla normativa applicabile.</p>
+        <h4>Diritti dell'interessato</h4>
+        <p>L'interessato può chiedere accesso, rettifica, cancellazione, limitazione, portabilità, opposizione al trattamento e revoca del consenso, ove applicabili, scrivendo a <a href="mailto:info@ristorantelabeccacciarapallo.it">info@ristorantelabeccacciarapallo.it</a>. La revoca non pregiudica la liceità del trattamento precedente. È inoltre possibile proporre reclamo al Garante per la protezione dei dati personali.</p>
       </article>
 
       <article class="legal-panel" data-legal-panel="cookies">
         <h3>Cookie policy</h3>
-        <p>Il sito non usa cookie di profilazione, sistemi di advertising o analytics. Per ricordare la scelta sui servizi esterni viene usata una preferenza tecnica nel browser.</p>
+        <p><strong>Ultimo aggiornamento:</strong> 21/10/2026.</p>
+        <p>Il sito non utilizza cookie di profilazione, pubblicità comportamentale o strumenti analytics. Usa esclusivamente una memoria tecnica locale per registrare la scelta relativa ai servizi esterni.</p>
         <h4>Strumenti presenti</h4>
         <ul>
-          <li><strong>Preferenza consenso:</strong> necessaria per ricordare se hai accettato o rifiutato il caricamento dei servizi esterni.</li>
-          <li><strong>Google Fonts:</strong> usato per la tipografia del sito; il caricamento può comportare richieste tecniche ai server Google.</li>
-          <li><strong>Google Maps:</strong> mappa e link verso Google Maps vengono caricati o aperti solo dopo consenso. Google potrebbe trattare dati secondo le proprie informative.</li>
+          <li><strong>Memoria locale tecnica:</strong> la chiave <code>laBeccacciaExternalServicesConsent</code> conserva nel browser l'accettazione o il rifiuto dei servizi esterni e la data della scelta. Rimane fino alla modifica della preferenza o alla cancellazione dei dati del browser.</li>
+          <li><strong>Google Fonts:</strong> utilizzato per la tipografia; il browser effettua richieste tecniche ai server Google.</li>
+          <li><strong>Google Maps:</strong> la mappa incorporata viene caricata soltanto dopo il consenso ai servizi esterni. Google può quindi ricevere dati tecnici e applicare i propri strumenti secondo la relativa informativa.</li>
           <li><strong>Plateform:</strong> il sistema esterno usato per gestire le prenotazioni online si apre quando selezioni "Prenota online".</li>
-          <li><strong>WhatsApp:</strong> il messaggio preparato dal form eventi viene aperto quando invii la richiesta di informazioni.</li>
-          <li><strong>Instagram, Facebook e sito ufficiale:</strong> si aprono solo quando selezioni i relativi link.</li>
+          <li><strong>WhatsApp:</strong> i messaggi preparati dai moduli vengono aperti solo quando invii la richiesta.</li>
+          <li><strong>Google, Instagram e Facebook:</strong> i relativi siti si aprono soltanto quando selezioni i link dedicati.</li>
         </ul>
-        <p>Il consenso può essere rilasciato dal banner iniziale oppure nel momento in cui provi a caricare Google Maps. La scelta può essere modificata in qualsiasi momento dal link "Gestisci cookie" nel footer.</p>
-        <p>Puoi anche cancellare dati e preferenze dal browser.</p>
+        <h4>Gestione delle preferenze</h4>
+        <p>Puoi accettare o rifiutare i servizi esterni dal banner. Il rifiuto non impedisce di consultare il sito né di contattare il ristorante via telefono o email. Puoi modificare la scelta in qualsiasi momento selezionando "Gestisci cookie" nel footer oppure cancellando i dati del browser.</p>
       </article>
 
       <article class="legal-panel" data-legal-panel="notes">
         <h3>Note legali</h3>
-        <p><strong>Proprietario del sito:</strong> RISTORANTE LA BECCACCIA · <strong>Nome attività:</strong> RISTORANTE LA BECCACCIA · <strong>P.IVA:</strong> 02650230994 · <strong>Email:</strong> <a href="mailto:info@ristorantelabeccacciarapallo.it">info@ristorantelabeccacciarapallo.it</a>.</p>
-        <p><strong>Indirizzo attività:</strong> Via Santa Maria del Campo 176, 16035 Rapallo (GE).</p>
-        <p>Testi, immagini e segni distintivi presenti nel sito sono riferiti a RISTORANTE LA BECCACCIA e non possono essere riutilizzati senza autorizzazione. Menu, prezzi, etichette, annate e disponibilità possono cambiare senza preavviso.</p>
+        <p><strong>Insegna commerciale:</strong> La Beccaccia - Brace e Cucina · <strong>P.IVA:</strong> 02650230994.</p>
+        <p><strong>Sede dell'attività:</strong> Via Santa Maria del Campo, 176 - 16035 Rapallo (GE) · <strong>Email:</strong> <a href="mailto:info@ristorantelabeccacciarapallo.it">info@ristorantelabeccacciarapallo.it</a>.</p>
+        <p>Testi, fotografie, grafica, logo e segni distintivi presenti nel sito sono riferiti a La Beccaccia - Brace e Cucina e non possono essere copiati, distribuiti o riutilizzati senza preventiva autorizzazione, salvo gli usi consentiti dalla legge.</p>
+        <p>Il titolare cura l'aggiornamento dei contenuti, ma non garantisce l'assenza di errori o interruzioni. Menu, prezzi, etichette, annate, orari e disponibilità possono cambiare; per informazioni aggiornate contatta direttamente il ristorante. I collegamenti a servizi esterni sono forniti per comodità e conducono a siti gestiti dai rispettivi titolari.</p>
         <p>In caso di allergie o intolleranze alimentari, informa sempre il personale prima dell'ordinazione. Alcuni prodotti possono essere sottoposti ad abbattimento rapido della temperatura secondo la normativa igienico-sanitaria applicabile.</p>
       </article>
     </div>
